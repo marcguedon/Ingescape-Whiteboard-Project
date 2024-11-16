@@ -6,7 +6,8 @@ Il s'agit du jeu Puissance 4 développé grâce à la plateforme Ingescape Circl
 ## Installation
 
 Copiez les dossiers ```Puissance4_View``` et ```Puissance4_Controller``` dans le dossier ```sandbox``` de votre installation Ingescape. \
-**ATTENTION** : Assurez-vous que le dossier ```Puissance4_View/data``` reste dans ce dossier !
+**ATTENTION** : Assurez-vous que le dossier ```Puissance4_View/data``` reste dans ce dossier ! \
+Les librairies ```pathlib```, ```keyboard``` et ```threading``` sont nécessaires au fonctionnement des agents, il faudra ainsi les installer si elles ne le sont pas (exemple : ```pip install keyboard```).
 
 ## Instructions
 
