@@ -25,4 +25,4 @@ Dans la partie jeu, il faut appuyer sur les flèches gauche/droite (←/→) pou
 
 ## Bugs
 
-Le jeu peut finir par être bloqué si l'utilisateur spam la touche flèche bas. Nous avons déjà limité la présence de ce bug, mais il est malheureusement toujours présent.
+Le jeu peut finir par être bloqué si l'utilisateur spam la touche flèche bas (↓) ou "Entrer" lors de la phase de jeu. Nous avons déjà limité la présence de ce bug, mais il est malheureusement toujours présent. Si ce bug survient, il faudra alors relancer l'exécution de ```Puissance4_View```, et de ```Puissance4_Controller```.
