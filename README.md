@@ -1,29 +1,38 @@
-# Puissance 4 (Ingescape Circle - Whiteboard)
+# Connect 4 (Ingescape Circle - Whiteboard)
 
-Projet réalisé par **Bastien LALANNE** et **Marc GUEDON** dans le câdre de la 3ème année d'école d'ingénieur en Systèmes Robotiques et Intéractifs à l'UPSSITECH.
-Il s'agit du jeu Puissance 4 développé grâce à la plateforme Ingescape Circle et avec le Whiteboard.
+Project developed by **Bastien LALANNE** and **Marc GUEDON** during the third year of engineering school in Robotic and Interactive Systems at UPSSITECH.
+This is a Connect 4 game developed using the Ingescape Circle platform and the Whiteboard. \
+Here is the [demonstration video](https://youtu.be/lwDcB8jhxZw).
 
 ## Installation
 
-Copiez les dossiers ```Puissance4_View``` et ```Puissance4_Controller``` dans le dossier ```sandbox``` de votre installation Ingescape. \
-**ATTENTION** : Assurez-vous que le dossier ```Puissance4_View/data``` reste dans ce dossier ! \
-Les librairies ```pathlib```, ```keyboard``` et ```threading``` sont nécessaires au fonctionnement des agents, il faudra ainsi les installer si elles ne le sont pas (exemple : ```pip install keyboard```).
+Copy the folders ```Puissance4_View``` and ```Puissance4_Controller``` into the ```sandbox``` folder of your Ingescape installation. \
+**WARNING**: Ensure that the folder ```Puissance4_View/data``` remains in this directory! \
+The libraries ```pathlib```, ```keyboard``` and ```threading``` are required for the agents to function. Install them if they are not already installed (e.g., ```pip install keyboard```).
 
 ## Instructions
 
-### Démarrer le jeu
+### Starting the game
 
-Vous pouvez démarrer Ingescape Circle v4, et ouvrir ```puissance4.igssystem```. Il faudra également démarrer le Whiteboard. \
-Assurez-vous que le port soit le même dans Circle, dans le Whiteboard, ainsi que dans le fichier main de ```Puissance4_View```, et de ```Puissance4_Controller```. \
-Pour démarrer le jeu, il faut d'abord exécuter le fichier ```main.py``` de ```Puissance4_View```, puis celui de ```Puissance4_Controller```. \
-Le jeu va alors automatiquement démarrer.
+You can start Ingescape Circle v4 and open ```puissance4.igssystem```. You will also need to start the Whiteboard. \
+Make sure the port is the same in Circle, the Whiteboard, as well as in the main files of ```Puissance4_View``` and ```Puissance4_Controller```. \
+To start the game, first execute the ```main.py``` file in ```Puissance4_View```, then execute the ```main.py``` file in ```Puissance4_Controller```. \
+The game will then start automatically.
 
-### Jouer au jeu
+### Connect 4 Rules Reminder
 
-Pour jouer à notre Puissance 4, toutes les commandes sont décrites directement sur le whiteboard mais aussi dans le chat du whiteboard. \
-Ainsi, dans la partie choix de la couleur, il faut appuyer sur les flèches gauche/droite (←/→) pour changer la couleur puis sur "Entrer" pour valider le choix. \
-Dans la partie jeu, il faut appuyer sur les flèches gauche/droite (←/→) pour changer de colonne puis sur "Entrer" ou sur la flèche bas (↓) pour valider la colonne.
+The goal of Connect 4 is to align four of your colored tokens horizontally, vertically, or diagonally before your opponent to win the round. \
+The grid contains 7 columns and 6 rows, so once a column is full, no more tokens can be placed in it. Turn by turn, the two players will drop tokens into the grid, trying to align four tokens. The token falls to the lowest available slot in the chosen column. \
+The game is declared a draw if all columns are filled without either player managing to align four tokens.
 
-## Bugs
+**Enjoy the game!**
 
-Le jeu peut finir par être bloqué si l'utilisateur spam la touche flèche bas (↓) ou "Entrer" lors de la phase de jeu. Nous avons déjà limité la présence de ce bug, mais il est malheureusement toujours présent. Si ce bug survient, il faudra alors relancer l'exécution de ```Puissance4_View```, et de ```Puissance4_Controller```.
+### Playing the game
+
+To play our Connect 4, all commands are displayed directly on the Whiteboard as well as in the Whiteboard chat. \
+In the color selection phase, press the left/right arrow keys (←/→) to change the color, then press "Enter" to confirm your choice. \
+During the game phase, press the left/right arrow keys (←/→) to change the column, then press the down arrow key (↓) to confirm the column.
+
+## Known bugs
+
+The game may freeze if the user spams the down arrow key (↓) during the game phase. We have mitigated the occurrence of this bug, but it is unfortunately still present. If this bug occurs, you will need to restart the execution of ```Puissance4_View``` and ```Puissance4_Controller```.

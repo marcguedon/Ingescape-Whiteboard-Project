@@ -147,7 +147,7 @@ class Puissance4_View(metaclass=Singleton):
 
         if (Player == -1):
             igs.service_call("Whiteboard", "chat", ("Match nul !"), "")
-            igs.service_call("Whiteboard", "addText", ("Match nul !", 510.0, 660.0, "black"), "")
+            igs.service_call("Whiteboard", "addText", ("Match nul ! (Entrer pour rejouer)", 345.0, 660.0, "black"), "")
         
         else:
             self.show_winning_segment(Winning_Segment)
@@ -168,9 +168,9 @@ class Puissance4_View(metaclass=Singleton):
         igs.service_call("Whiteboard", "clear", (), "")
 
         igs.service_call("Whiteboard", "chat", ("Nouvelle manche."), "")
-        igs.service_call("Whiteboard", "chat", ("← ou → pour changer de couleur, \"enter\" pour accepter."), "")
+        igs.service_call("Whiteboard", "chat", ("← ou → pour changer de couleur, Entrer pour accepter."), "")
         igs.service_call("Whiteboard", "addText", ("Choisissez votre couleur.", 400.0, 420.0, "black"), "")
-        igs.service_call("Whiteboard", "addText", ("← ou → pour changer de couleur, \"enter\" pour accepter", 170.0, 660.0, "black"), "")
+        igs.service_call("Whiteboard", "addText", ("← ou → pour changer de couleur, Entrer pour accepter", 170.0, 660.0, "black"), "")
 
     def Init_Game(self, sender_agent_name, sender_agent_uuid):
         '''

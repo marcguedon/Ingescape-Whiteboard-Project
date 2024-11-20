@@ -69,7 +69,8 @@ class Puissance4_Controller(metaclass=Singleton):
                 break
 
             if self.is_board_full():
-                igs.service_call("Puissance4_View", "show_winner", (-1, None), "")
+                print("Board is full")
+                igs.service_call("Puissance4_View", "show_winner", (-1, 0, 0, 0, 0), "")
                 break
 
             player = 2 if player == 1 else 1
@@ -254,7 +255,7 @@ class Puissance4_Controller(metaclass=Singleton):
 
             keyboard.on_press_key("left", lambda _: on_left_press())
             keyboard.on_press_key("right", lambda _: on_right_press())
-            keyboard.wait("enter") or keyboard.wait("down")
+            keyboard.wait("enter")
 
             self.players_color[player-1] = color_list[index]
 
