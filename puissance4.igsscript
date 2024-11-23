@@ -10,22 +10,34 @@
 }
 
 
-"Inputs" "Test inputs" {
-    Whiteboard.title = "Hello world"
-    assert user "Title is 'Hello world'"
-
-    Whiteboard.backgroundColor = "pink"
-    assert user "Background color is pink"
-
-    Whiteboard.backgroundColor = "white"
-    assert Whiteboard.lastAction == "Input backgroundColor: white"
-
-    Whiteboard.chatMessage = "Lorem ipsum sic dolor amet"
-    assert Whiteboard.lastChatMessage == "Lorem ipsum sic dolor amet"
-}
-
-
 "Services" "Test services" {
+    Puissance4_View.Init_Game()
+    assert elementCreated from Whiteboard
+
+    Puissance4_View.Init_Color_Choice()
+    assert elementCreated from Whiteboard
+
+    Puissance4_View.Show_Winner()
+    assert
+
+    Puissance4_View.Show_Playing_Player()
+    assert
+
+    Puissance4_View.Place_Token()
+    assert
+
+    Puissance4_View.Preview_Token()
+    assert
+
+    Puissance4_View.Choose_Token_Color()
+    assert
+
+    Puissance4_View.Show_Choosing_Player()
+    assert
+
+
+
+
     Whiteboard.clear()
     sleep 100
 
