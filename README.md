@@ -14,6 +14,11 @@ The libraries ```pathlib```, ```keyboard``` and ```threading``` are required for
 
 ### Starting the game
 
+**Automatically** \
+You can run the ```launcher.exe``` executable. First, you will have to choose your ```Ingescape Circle v4``` executable via the file explorer, then you will have to choose the port and the device for the connection. \
+Everything will be configured and launched automatically, all you have to do is play.
+
+**Manually** \
 You can start Ingescape Circle v4 and open ```puissance4.igssystem```. You will also need to start the Whiteboard. \
 Make sure the port is the same in Circle, the Whiteboard, as well as in the main files of ```Puissance4_View``` and ```Puissance4_Controller```. \
 To start the game, first execute the ```main.py``` file in ```Puissance4_View```, then execute the ```main.py``` file in ```Puissance4_Controller```. \
