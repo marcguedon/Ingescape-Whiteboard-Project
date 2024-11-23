@@ -320,7 +320,7 @@ if __name__ == "__main__":
     else:
         while (not is_interrupted) and igs.is_started():
             time.sleep(2)
-            agent.Game_TitleO = "Puissance 4"
+            agent.Game_TitleO = "Connect 4"
 
     if igs.is_started():
         igs.stop()

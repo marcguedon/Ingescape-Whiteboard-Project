@@ -68,7 +68,7 @@ class Puissance4_View(metaclass=Singleton):
             Player: int (representing the current player)
         '''
 
-        igs.service_call("Whiteboard", "chat", ("Joueur " + str(Player) + ", choisissez votre couleur."), "")
+        igs.service_call("Whiteboard", "chat", ("Player " + str(Player) + ", choose your color."), "")
 
         if "player" in self.elements_list:
             igs.service_call("Whiteboard", "remove", (self.elements_list["player"]), "")
@@ -112,7 +112,7 @@ class Puissance4_View(metaclass=Singleton):
             Column_Number: int (representing the column number where the token is placed)
         '''
 
-        igs.service_call("Whiteboard", "chat", ("Joueur " + str(Player) + " a placé un jeton en " + str(Column_Number+1) + "."), "")
+        igs.service_call("Whiteboard", "chat", ("Player " + str(Player) + " placed a token at " + str(Column_Number+1) + "."), "")
 
         for _ in range(0, 561 - Line_Number * 100, 1):
             igs.service_call("Whiteboard", "translate", (self.elements_list["token"], 0.0, 1.0), "")
@@ -127,7 +127,7 @@ class Puissance4_View(metaclass=Singleton):
             Player: int (representing the playing player)
         '''
 
-        igs.service_call("Whiteboard", "chat", ("Au tour de joueur " + str(Player) + " !"), "")
+        igs.service_call("Whiteboard", "chat", ("Player " + str(Player) + "'s turn !"), "")
 
         if "player" in self.elements_list:
             igs.service_call("Whiteboard", "remove", (self.elements_list["player"]), "")
@@ -146,16 +146,16 @@ class Puissance4_View(metaclass=Singleton):
         igs.service_call("Whiteboard", "remove", (0), "")
 
         if (Player == -1):
-            igs.service_call("Whiteboard", "chat", ("Match nul !"), "")
-            igs.service_call("Whiteboard", "addText", ("Match nul ! (Entrer pour rejouer)", 345.0, 660.0, "black"), "")
+            igs.service_call("Whiteboard", "chat", ("Draw !"), "")
+            igs.service_call("Whiteboard", "addText", ("Draw ! (Enter to play again)", 380.0, 660.0, "black"), "")
         
         else:
             self.show_winning_segment(Winning_Segment)
 
-            igs.service_call("Whiteboard", "chat", ("Joueur " + str(Player) + " a gagné la manche !"), "")
-            igs.service_call("Whiteboard", "addText", ("Joueur " + str(Player) + " a gagné la manche ! (Entrer pour rejouer)", 205.0, 660.0, "black"), "")
+            igs.service_call("Whiteboard", "chat", ("Player " + str(Player) + " won the round !"), "")
+            igs.service_call("Whiteboard", "addText", ("Player " + str(Player) + " won the round ! (Enter to play again)", 245.0, 660.0, "black"), "")
 
-        igs.service_call("Whiteboard", "chat", ("Pressez Entrer pour commencer une nouvelle manche."), "")
+        igs.service_call("Whiteboard", "chat", ("Press Enter to start a new round."), "")
 
     def Init_Color_Choice(self, sender_agent_name, sender_agent_uuid):
         '''
@@ -167,10 +167,11 @@ class Puissance4_View(metaclass=Singleton):
         igs.service_call("Whiteboard", "hideLabels", (), "")
         igs.service_call("Whiteboard", "clear", (), "")
 
-        igs.service_call("Whiteboard", "chat", ("Nouvelle manche."), "")
-        igs.service_call("Whiteboard", "chat", ("← ou → pour changer de couleur, Entrer pour accepter."), "")
-        igs.service_call("Whiteboard", "addText", ("Choisissez votre couleur.", 400.0, 420.0, "black"), "")
-        igs.service_call("Whiteboard", "addText", ("← ou → pour changer de couleur, Entrer pour accepter", 170.0, 660.0, "black"), "")
+        igs.service_call("Whiteboard", "chat", ("New round."), "")
+        igs.service_call("Whiteboard", "chat", ("← or → to change color, Enter to accept."), "")
+
+        igs.service_call("Whiteboard", "addText", ("Choose your color", 455.0, 420.0, "black"), "")
+        igs.service_call("Whiteboard", "addText", ("← or → to change color, Enter to accept", 290.0, 660.0, "black"), "")
 
     def Init_Game(self, sender_agent_name, sender_agent_uuid):
         '''
@@ -180,8 +181,8 @@ class Puissance4_View(metaclass=Singleton):
         igs.service_call("Whiteboard", "clear", (), "")
         self.elements_list.pop("player", None)
 
-        igs.service_call("Whiteboard", "chat", ("← ou → pour changer de colonne, ↓ pour placer le jeton."), "")
-        igs.service_call("Whiteboard", "addText", ("← ou → pour changer de colonne, ↓ pour placer le jeton", 165.0, 660.0, "black"), "")
+        igs.service_call("Whiteboard", "chat", ("← or → to change column, ↓ to place the token."), "")
+        igs.service_call("Whiteboard", "addText", ("← or → to change column, ↓ to place the token", 235.0, 660.0, "black"), "")
 
         # Draw the grid
         igs.service_call("Whiteboard", "addShape", ("rectangle", 250.0, 50.0, 700.0, 5.0, "black", 0.0, 0.0), "")

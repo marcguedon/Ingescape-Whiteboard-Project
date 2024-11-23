@@ -69,7 +69,6 @@ class Puissance4_Controller(metaclass=Singleton):
                 break
 
             if self.is_board_full():
-                print("Board is full")
                 igs.service_call("Puissance4_View", "show_winner", (-1, 0, 0, 0, 0), "")
                 break
 

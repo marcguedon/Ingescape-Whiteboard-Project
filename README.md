@@ -8,14 +8,14 @@ Here is the [demonstration video](https://youtu.be/lwDcB8jhxZw).
 
 Copy the folders ```Puissance4_View``` and ```Puissance4_Controller``` into the ```sandbox``` folder of your Ingescape installation. \
 **WARNING**: Ensure that the folder ```Puissance4_View/data``` remains in this directory! \
-The libraries ```pathlib```, ```keyboard``` and ```threading``` are required for the agents to function. Install them if they are not already installed (e.g., ```pip install keyboard```).
+The libraries ```keyboard``` and ```tkinter``` are required for the agents/python scripts to work. Install them if they are not already installed (```pip install keyboard``` and ```pip install tkinter```).
 
 ## Instructions
 
 ### Starting the game
 
 **Automatically** \
-You can run the ```launcher.exe``` executable. First, you will have to choose your ```Ingescape Circle v4``` executable via the file explorer, then you will have to choose the port and the device for the connection. \
+You can run the ```launcher.py``` script. First, you will have to choose your ```Ingescape Circle v4``` executable via the file explorer, then you will have to choose the port and the device for the connection. \
 Everything will be configured and launched automatically, all you have to do is play.
 
 **Manually** \
