@@ -10,8 +10,14 @@
 }
 
 
-"Services" "Test services for Puissance4_View" {
+"View services" "Test services for Puissance4_View" {
     Puissance4_View.Init_Game()
     assert elementCreated from Whiteboard
     assert user "Game grid is initialized."
 }
+
+/*
+"Controller services" "Test services for Puissance4_Controller" {
+
+}
+*/
