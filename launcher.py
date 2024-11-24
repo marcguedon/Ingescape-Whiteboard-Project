@@ -55,8 +55,8 @@ def launch_processes(port, device, ingescape_circle_path, whiteboard_path, inges
     processes.extend([
         subprocess.Popen([whiteboard_path, '--port', port, '--device', device]),
         subprocess.Popen([ingescape_circle_path, ingescape_project_path, '--port', port, '--device', device]),
-        subprocess.Popen(['python', 'Puissance4_View/src/main.py', '--port', port, '--device', device]),
-        subprocess.Popen(['python', 'Puissance4_Controller/src/main.py', '--port', port, '--device', device])
+        subprocess.Popen(['python', os.path.abspath('Puissance4_View/src/main.py'), '--port', port, '--device', device]),
+        subprocess.Popen(['python', os.path.abspath('Puissance4_Controller/src/main.py'), '--port', port, '--device', device])
     ])
 
     try:
@@ -151,11 +151,8 @@ def main():
         print("Path to the executable not selected. Closing the program.")
         return
 
-    relative_whiteboard_path = "Whiteboard.win64/Whiteboard/Whiteboard.exe"
-    relative_ingescape_project_path = "puissance4.igssystem"
-
-    whiteboard_path = os.path.abspath(relative_whiteboard_path)
-    ingescape_project_path = os.path.abspath(relative_ingescape_project_path)
+    whiteboard_path = os.path.abspath("Whiteboard.win64/Whiteboard/Whiteboard.exe")
+    ingescape_project_path = os.path.abspath("puissance4.igssystem")
 
     create_parameter_window(ingescape_circle_path, whiteboard_path, ingescape_project_path, processes)
 
