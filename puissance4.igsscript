@@ -2,22 +2,36 @@
 * Puissance4_View Test
 */
 
-"Clean-up" {
-    Whiteboard.clear()
-    Whiteboard.title = "Title"
-    Whiteboard.backgroundColor = "white"
-    assert user "Title is 'Title' and background is white"
-}
+"Services" "Test services for Puissance4_View" {
+    Puissance4_View.show_choosing_player(2)
+    assert user "'Player 2' has appeared"
 
+    Puissance4_View.init_color_choice()
+    assert user "'Choose your color' has appeared"
 
-"View services" "Test services for Puissance4_View" {
-    Puissance4_View.Init_Game()
-    assert elementCreated from Whiteboard
-    assert user "Game grid is initialized."
+    Puissance4_View.choose_token_color("blue")
+    assert user "A blue circle has appeared"
+
+    Puissance4_View.init_game()
+    assert user "The game grid is initialized"
+
+    Puissance4_View.show_playing_player(2)
+    assert user "'Player 2' has appeared"
+
+    Puissance4_View.preview_token(3, "blue")
+    assert user "A token is previewed on the top of the column 4 (from left to right)"
+
+    /* 
+     * The column number between preview_token and place_token must not change
+     * The logic is that "preview_token" is necessarily called before "place_token" with the same column number
+     * So "place_token" does not change the column token
+     */
+    Puissance4_View.place_token(1, 1, 3)
+    assert user "The token is placed in column 4, row 2. (from left to right, and from down to top)"
 }
 
 /*
-"Controller services" "Test services for Puissance4_Controller" {
-
+"Services" "Test services for Puissance4_Controller" {
+    NO SERVICES EXCEPT CALLBACK SERVICES
 }
 */
