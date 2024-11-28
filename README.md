@@ -6,20 +6,20 @@ Here is the [demonstration video](https://youtu.be/lwDcB8jhxZw).
 
 ## Installation
 
-The libraries ```keyboard``` and ```tkinter``` are required for the agents/python scripts to work. Install them if they are not already installed (```pip install keyboard``` and ```pip install tkinter```).
+The libraries `keyboard` and `tkinter` are required for the agents/python scripts to work. Install them if they are not already installed (`pip install keyboard` and `pip install tkinter`).
 
 ## Instructions
 
 ### Starting the game
 
 **Automatically (only works on Windows)** \
-You can run the ```launcher.py``` script. First, you will have to choose your ```Ingescape Circle v4``` executable via the file explorer, then you will have to choose the port and the device for the connection. \
+You can run the `launcher.py` script. First, you will have to choose your `Ingescape Circle v4` executable via the file explorer, then you will have to choose the port and the device for the connection. \
 Everything will be configured and launched automatically, all you have to do is play.
 
 **Manually** \
-You can start Ingescape Circle v4 and open ```puissance4.igssystem```. You will also need to start the Whiteboard. \
-Make sure the port is the same in Circle, in the Whiteboard, as well as in the main files of ```Puissance4_View``` and ```Puissance4_Controller```. \
-To start the game, first execute the ```main.py``` file in ```Puissance4_View```, then execute the ```main.py``` file in ```Puissance4_Controller```. \
+You can start Ingescape Circle v4 and open `puissance4.igssystem`. You will also need to start the Whiteboard. \
+Make sure the port is the same in Circle, in the Whiteboard, as well as in the main files of `Puissance4_View` and `Puissance4_Controller`. \
+To start the game, first execute the `main.py` file in `Puissance4_View`, then execute the `main.py` file in `Puissance4_Controller`. \
 The game will then start automatically.
 
 ### Connect 4 Rules Reminder
@@ -38,5 +38,5 @@ During the game phase, press the left/right arrow keys (←/→) to change the c
 
 ## Known bugs
 
-The game may freeze if the user spams the down arrow key (↓) during the game phase. We have mitigated the occurrence of this bug, but it is unfortunately still present. If this bug occurs, you will need to close the Circle and Whiteboard windows and run again launcher.py (automatically method) or to restart the execution of ```Puissance4_View``` and ```Puissance4_Controller``` (manually method). \
+The game may freeze if the user spams the down arrow key (↓) during the game phase. We have mitigated the occurrence of this bug, but it is unfortunately still present. If this bug occurs, you will need to close the Circle and Whiteboard windows and run again launcher.py (automatically method) or to restart the execution of `Puissance4_View` and `Puissance4_Controller` (manually method). \
 **To avoid this bug**, wait until the token placement animation is over before trying to move the next token.
